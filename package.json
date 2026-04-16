@@ -1,0 +1,48 @@
+{
+  "name": "@pamfilico/nextjs-url-tabs",
+  "version": "0.1.0",
+  "description": "Next.js MUI Tabs component with URL query parameter state sync",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "cd tests && npm run test"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "next": ">=14",
+    "@mui/material": ">=5",
+    "@emotion/react": ">=11",
+    "@emotion/styled": ">=11"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "react": "^19.0.0",
+    "@types/react": "^19.0.0",
+    "@types/node": "^22.0.0",
+    "next": "^16.0.0",
+    "@mui/material": "^7.3.4",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0"
+  },
+  "author": "Pamfilico",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pamfilico/pamfilico-nextjs-url-tabs.git"
+  }
+}
