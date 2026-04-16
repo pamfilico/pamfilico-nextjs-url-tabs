@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { UrlStateTabs } from "@pamfilico/nextjs-url-tabs";
 
-export default function HomePage() {
+function HomeContent() {
   return (
     <div style={{ padding: 24 }}>
       <h1>Basic Tabs</h1>
@@ -15,5 +15,13 @@ export default function HomePage() {
         ]}
       />
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <Suspense>
+      <HomeContent />
+    </Suspense>
   );
 }

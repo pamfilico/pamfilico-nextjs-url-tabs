@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { UrlStateTabs } from "@pamfilico/nextjs-url-tabs";
 
-export default function SettingsPage() {
+function SettingsContent() {
   const [lastChanged, setLastChanged] = useState<number | null>(null);
 
   return (
@@ -20,5 +20,13 @@ export default function SettingsPage() {
         ]}
       />
     </div>
+  );
+}
+
+export default function SettingsPage() {
+  return (
+    <Suspense>
+      <SettingsContent />
+    </Suspense>
   );
 }
